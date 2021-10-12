@@ -13,11 +13,12 @@ function setup() {
   ellipse(100, 450, 390, 120);
   ellipse(400, 450, 475, 90);
   ellipse(750, 450 , 550, 100);
+  }
   
   let url = httpGet();
   let APIKEY = "6c897f070ff5c68387abf0306fedce0c";
-  let city = createInput("Bitte geben Sie eine Stadt ein.");
-  city.position(750, 50);
+  let city = createInput("");
+  city.position(25, 25);
   city.size(175);
   city.input(Textfeld);
   url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+APIKEY;
@@ -25,9 +26,10 @@ function setup() {
   httpGet(url, 'jsonp', false, function(response) {
     console.log(response);
   });
-}
 
 function Textfeld() {
   console.log('you are typing: ', this.value());
 }
+}
+function draw() {
 }
