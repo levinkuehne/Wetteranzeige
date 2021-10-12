@@ -1,8 +1,10 @@
 # Wetteranzeige
 
-Wir haben ein Programm erstellt, welches je nach Wetterlage das Wetter einer bestimmten Ortschaft anzeigt.
+Jérôme, Robin, Levin
 
-Das Wetter wird grafisch angezeigt
+Wir haben ein Programm in P5js erstellt, welches je nach Wetterlage das Wetter einer bestimmten Ortschaft anzeigt. Diese Ortschaft kann man beliebig angeben und das Wetter wird grafisch angezeigt. 
+
+Dazu werden wir die OpenWeather API (https://openweathermap.org/api) benutzen.
 
 
 
