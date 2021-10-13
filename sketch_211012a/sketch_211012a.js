@@ -1,5 +1,12 @@
 let APIKEY = "6c897f070ff5c68387abf0306fedce0c";
+let APIURL = "https://api.openweathermap.org/data/2.5/weather?q=";
+let APPID = "&appid=" + APIKEY;
+
 let city;
+let response;
+let DATA;
+let temperature;
+let weather;
 
 function setup() {
   
@@ -27,7 +34,8 @@ function setup() {
   button = createButton('submit');
   button.position(200, 25, 65);
   button.mousePressed(mySubmitEvent);
-  
+
+  noLoop();
 }
 
 function mySubmitEvent(){
@@ -41,88 +49,36 @@ function myInputEvent() {
 }
 
 function queryAPI(value) {
-  let url = "https://api.openweathermap.org/data/2.5/weather?q="+value+"&appid="+APIKEY;
+  let url = APIURL + value + APPID;
   httpGet(url, 'jsonp', false, function(response) {
-  console.log(response);
-  });
+  console.log(response.main.temp);
+  DATA = response;
+});
+  loop();
 }
-/*  function preload() {
-  Wetteranzeige = loadJSON(url);
+
+function displayWeatherData() {
+   if (DATA !== undefined) {
+     console.log(DATA.main.temp);
+     console.log(DATA.weather[0].main);
+     
+     temperature = DATA.main.temp - 273,15;
+     weather = DATA.weather[0].main;
+     temp = round(temperature, 1);
+     
+   let OutputTemp = "Die Temperatur beträgt " + temp + " °C.";
+   fill(0);
+   text(OutputTemp, 25, 75, 200, 100);
+  
+   let OutputWeather = weather;
+   fill(0);
+   text(OutputWeather, 25, 125, 200, 100);
+} 
 }
-  function draw() {
-  let temp = main.temp[0];
-  var weather = weather[0].description;
-  print('weather' + 'temp');
-  noLoop(); 
-}  */
+
 
 function draw() {
   
- //Regenwolke
- 
-  noStroke();
-  rect(340, 118, 80, 40);
-  
-  noStroke();
-  fill("white");
-  circle(420, 105, 50);
-  noFill();
-  
-  noStroke();
-  fill("white");
-  circle(390, 100, 50);
-  noFill();
-  
-  noStroke();
-  fill("white");
-  circle(360, 110, 50);
-  noFill();
-  
-  noStroke();
-  fill("white");
-  circle(335, 125, 50);
-  noFill();
-  
-  noStroke();
-  fill("white");
-  circle(435, 135, 50);
-  noFill();
-  
-  noStroke();
-  fill("white");
-  circle(420, 135, 50);
-  noFill();
-  
-  noStroke();
-  fill("white");
-  circle(345, 135, 50);
-  noFill();
-  
-  noStroke();
-  fill("white");
-  circle(370, 140, 50);
-  noFill();
-  
-  noStroke();
-  fill("white");
-  circle(390, 138, 50);
-  noFill();
-  
- //Regen
- 
-  stroke(100, 100, 255);
-  strokeWeight(2);
-  
-  let x = random(320,450);
-  let y = random(165, 358);
-  
-   line(x,y,x,y + 40);
-   
-  stroke("lightblue");
-  strokeWeight(4);
-  
-  let x2 = random(320,450);
-  let y2 = random(165,358);
-  
-  line(x2,y2,x2,y2 + 40);
+  displayWeatherData();
+
 }
