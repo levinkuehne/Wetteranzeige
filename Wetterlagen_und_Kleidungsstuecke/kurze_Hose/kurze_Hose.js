@@ -1,6 +1,6 @@
 function setup() {
  
-  //Hntergrund
+ //Hntergrund
   
   createCanvas(1000, 500);
   background("lightblue");
@@ -10,23 +10,14 @@ function setup() {
  stroke("black");
  
  //Hose
- line(750, 340, 840, 340);
- line(750, 340, 720, 450);
- line(720, 450, 775, 450);
- line(775, 450, 795, 400);
- line(795, 400, 815, 450);
- line(815, 450, 870, 450);
- line(870, 450, 840, 340);
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ line(790, 260, 880, 260);
+ line(790, 260, 760, 370);
+ line(760, 370, 815, 370);
+ line(815, 370, 835, 320);
+ line(835, 320, 855, 370);
+ line(855, 370, 910, 370);
+ line(910, 370, 880, 260);
+
 }
 
 
