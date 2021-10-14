@@ -63,7 +63,7 @@ function displayWeatherData() {
 
 function draw() {
   
-  frameRate(120);
+  frameRate(30);
 
  //Hintergrund
  
@@ -249,7 +249,7 @@ function drawRain() {
   noFill();
   
  //Regen
- 
+  
   stroke(100, 100, 255);
   strokeWeight(2);
   
@@ -258,11 +258,19 @@ function drawRain() {
   
    line(x,y,x,y + 40);
    
-  stroke("lightblue");
-  strokeWeight(4);
+  stroke("turquoise");
+  strokeWeight(2);
   
   let x2 = random(320,450);
   let y2 = random(165,358);
   
    line(x2,y2,x2,y2 + 40);
+   
+  stroke("darkblue");
+  strokeWeight(2);
+  
+  let x3 = random(320,450);
+  let y3 = random(165,358);
+  
+   line(x3,y3,x3,y3 + 40);
 }
