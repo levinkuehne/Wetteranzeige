@@ -63,7 +63,7 @@ function displayWeatherData() {
 
 function draw() {
   
-  frameRate(30);
+  frameRate(10);
 
  //Hintergrund
  
@@ -78,6 +78,20 @@ function draw() {
   ellipse(100, 450, 390, 120);
   ellipse(400, 450, 475, 90);
   ellipse(750, 450 , 550, 100);
+  
+  fill("lightgrey");
+  rect(666, 0, 334, 500);
+  stroke("black");
+  strokeWeight(2);
+  line(666, 0, 666, 500);
+  noStroke();
+  
+  fill("lightgrey");
+  rect(0, 0, 333, 500);
+  stroke("black");
+  strokeWeight(2);
+  line(333, 0, 333, 500);
+  noStroke();
   
   displayWeatherData();
   
@@ -101,25 +115,219 @@ function draw() {
 }
 
 function drawHaze() {
+  
+//Jacke
+ strokeWeight(5);
+ stroke("red");
+ 
+//linker Arm
+ 
+ line(790, 40, 740, 90);
+ line(740, 90, 740, 200);
+ line(740, 200, 770, 200);
+ line(770, 200, 770, 120);
+ line(770, 120, 790, 100);
+ 
+//Bauch
+ 
+ line(790, 100, 790, 230);
+ line(790, 230, 880, 230);
+ line(880, 230, 880, 100);
+ line(835, 230, 835, 70);
+ 
+//rechter Arm
+ 
+ line(880, 100, 900, 120);
+ line(900, 120, 900, 200);
+ line(900, 200, 930, 200);
+ line(930, 200, 930, 90);
+ line(930, 90, 880, 40);
+ 
+//Kopf
+ 
+ line(790, 40, 805, 40);
+ line(880, 40, 865, 40);
+ noFill();
+ arc(835, 40, 50, 50, 0, HALF_PI);
+ arc(835, 40, 50, 50, HALF_PI, PI);
+ 
+ 
+//lange Hose
+
+ strokeWeight(5);
+ stroke("blue");
+ 
+//Hose
+ 
+ line(790, 260, 880, 260);
+ line(790, 260, 760, 450);
+ line(760, 450, 815, 450);
+ line(815, 450, 835, 320);
+ line(835, 320, 855, 450);
+ line(855, 450, 910, 450);
+ line(910, 450, 880, 260);
+ 
+//Taschen
+ 
+ line(790, 300, 810, 300);
+ line(810, 300, 815, 260);
+ line(880, 300, 860, 300);
+ line(860, 300, 855, 260);
+  
+  
+//Nebel
+
   stroke(195);
   strokeWeight(15);
-  line(300,200,550,200);
-  strokeWeight(15);
-  line(250,160,450,160);
-  strokeWeight(15);
-  line(350,120,560,120);
-  strokeWeight(15);
-  line(270,240,490,240);
-  strokeWeight(15);
-  line(350,280,510,280);
+  line(390,200,640,200);
+  line(350,160,540,160);
+  line(440,120,650,120);
+  line(360,240,580,240);
+  line(440,280,600,280);
 }
 
 function drawSnow() {
+  
+//Jacke
+ strokeWeight(5);
+ stroke("red");
  
+//linker Arm
+ 
+ line(790, 40, 740, 90);
+ line(740, 90, 740, 200);
+ line(740, 200, 770, 200);
+ line(770, 200, 770, 120);
+ line(770, 120, 790, 100);
+ 
+//Bauch
+ 
+ line(790, 100, 790, 230);
+ line(790, 230, 880, 230);
+ line(880, 230, 880, 100);
+ line(835, 230, 835, 70);
+ 
+//rechter Arm
+ 
+ line(880, 100, 900, 120);
+ line(900, 120, 900, 200);
+ line(900, 200, 930, 200);
+ line(930, 200, 930, 90);
+ line(930, 90, 880, 40);
+ 
+//Kopf
+ 
+ line(790, 40, 805, 40);
+ line(880, 40, 865, 40);
+ noFill();
+ arc(835, 40, 50, 50, 0, HALF_PI);
+ arc(835, 40, 50, 50, HALF_PI, PI);
+ 
+ 
+//lange Hose
+
+ strokeWeight(5);
+ stroke("blue");
+ 
+//Hose
+ 
+ line(790, 260, 880, 260);
+ line(790, 260, 760, 450);
+ line(760, 450, 815, 450);
+ line(815, 450, 835, 320);
+ line(835, 320, 855, 450);
+ line(855, 450, 910, 450);
+ line(910, 450, 880, 260);
+ 
+//Taschen
+ 
+ line(790, 300, 810, 300);
+ line(810, 300, 815, 260);
+ line(880, 300, 860, 300);
+ line(860, 300, 855, 260);
+  
+  fill("darkblue");
+  rect(333, 0, 333, 500);
+  noFill();
+  
+  fill("white");
+  rect(333, 450, 333, 50);
+  noFill();
+  
+//Schnee  
+  
+  for (let x = 0; x < 50; x++) {
+    
+    strokeWeight(5);
+    stroke("white");
+    point(random(333, 666), random(0, 500));
+  }
+  
 }
 
 function drawThunderstorm() {
   
+//Jacke
+
+ strokeWeight(5);
+ stroke("red");
+ 
+//linker Arm
+ 
+ line(790, 40, 740, 90);
+ line(740, 90, 740, 200);
+ line(740, 200, 770, 200);
+ line(770, 200, 770, 120);
+ line(770, 120, 790, 100);
+ 
+//Bauch
+ 
+ line(790, 100, 790, 230);
+ line(790, 230, 880, 230);
+ line(880, 230, 880, 100);
+ line(835, 230, 835, 70);
+ 
+//rechter Arm
+ 
+ line(880, 100, 900, 120);
+ line(900, 120, 900, 200);
+ line(900, 200, 930, 200);
+ line(930, 200, 930, 90);
+ line(930, 90, 880, 40);
+ 
+//Kopf
+ 
+ line(790, 40, 805, 40);
+ line(880, 40, 865, 40);
+ noFill();
+ arc(835, 40, 50, 50, 0, HALF_PI);
+ arc(835, 40, 50, 50, HALF_PI, PI);
+ 
+ 
+//lange Hose
+
+ strokeWeight(5);
+ stroke("blue");
+ 
+//Hose
+ 
+ line(790, 260, 880, 260);
+ line(790, 260, 760, 450);
+ line(760, 450, 815, 450);
+ line(815, 450, 835, 320);
+ line(835, 320, 855, 450);
+ line(855, 450, 910, 450);
+ line(910, 450, 880, 260);
+ 
+//Taschen
+ 
+ line(790, 300, 810, 300);
+ line(810, 300, 815, 260);
+ line(880, 300, 860, 300);
+ line(860, 300, 855, 260);
+  
+
+//Gewitter  
   fill("yellow");
   strokeWeight(5);
   stroke(255);
@@ -149,30 +357,141 @@ function drawThunderstorm() {
 
 function drawFog() {
 
+//Jacke
+ strokeWeight(5);
+ stroke("red");
+ 
+//linker Arm
+ 
+ line(790, 40, 740, 90);
+ line(740, 90, 740, 200);
+ line(740, 200, 770, 200);
+ line(770, 200, 770, 120);
+ line(770, 120, 790, 100);
+ 
+//Bauch
+ 
+ line(790, 100, 790, 230);
+ line(790, 230, 880, 230);
+ line(880, 230, 880, 100);
+ line(835, 230, 835, 70);
+ 
+//rechter Arm
+ 
+ line(880, 100, 900, 120);
+ line(900, 120, 900, 200);
+ line(900, 200, 930, 200);
+ line(930, 200, 930, 90);
+ line(930, 90, 880, 40);
+ 
+//Kopf
+ 
+ line(790, 40, 805, 40);
+ line(880, 40, 865, 40);
+ noFill();
+ arc(835, 40, 50, 50, 0, HALF_PI);
+ arc(835, 40, 50, 50, HALF_PI, PI);
+ 
+ 
+//lange Hose
+
+ strokeWeight(5);
+ stroke("blue");
+ 
+//Hose
+ 
+ line(790, 260, 880, 260);
+ line(790, 260, 760, 450);
+ line(760, 450, 815, 450);
+ line(815, 450, 835, 320);
+ line(835, 320, 855, 450);
+ line(855, 450, 910, 450);
+ line(910, 450, 880, 260);
+ 
+//Taschen
+ 
+ line(790, 300, 810, 300);
+ line(810, 300, 815, 260);
+ line(880, 300, 860, 300);
+ line(860, 300, 855, 260);
+  
+  
+//Nebel
+
   stroke(195);
   strokeWeight(15);
-  line(300,200,550,200);
-  strokeWeight(15);
-  line(250,160,450,160);
-  strokeWeight(15);
-  line(350,120,560,120);
-  strokeWeight(15);
-  line(270,240,490,240);
-  strokeWeight(15);
-  line(350,280,510,280);
+  line(390,200,640,200);
+  line(350,160,540,160);
+  line(440,120,650,120);
+  line(360,240,580,240);
+  line(440,280,600,280);
 }
 
 function drawClear() {
   
+//T-Shirt
+
+ strokeWeight(5);
+ stroke("orange");
+ 
+//linker Arm
+ 
+ line(790, 40, 740, 90);
+ line(740, 90, 770, 120);
+ line(770, 120, 790, 100);
+ 
+//Bauch
+ 
+ line(790, 100, 790, 230);
+ line(790, 230, 880, 230);
+ line(880, 230, 880, 100);
+ 
+//rechter Arm
+ 
+ line(880, 100, 900, 120);
+ line(900, 120, 930, 90);
+ line(930, 90, 880, 40);
+ 
+//Kopf
+ 
+ line(790, 40, 805, 40);
+ line(880, 40, 865, 40);
+ noFill();
+ arc(835, 40, 50, 50, 0, HALF_PI);
+ arc(835, 40, 50, 50, HALF_PI, PI);
+
+
+//Kurze Hose
+
+ strokeWeight(5);
+ stroke("blue");
+
+ line(790, 260, 880, 260);
+ line(790, 260, 760, 370);
+ line(760, 370, 815, 370);
+ line(815, 370, 835, 320);
+ line(835, 320, 855, 370);
+ line(855, 370, 910, 370);
+ line(910, 370, 880, 260);
+ 
+//Taschen
+ 
+ line(785, 300, 810, 300);
+ line(810, 300, 815, 260);
+ line(885, 300, 860, 300);
+ line(860, 300, 855, 260);
+
+//Sonne
+
   noStroke();
   fill("yellow");
-  circle(400, 175, 80);
+  circle(500, 200, 80);
   noFill();
   
   strokeWeight(10);
   stroke("yellow");
   
-  translate(400, 175);
+  translate(500, 200);
   
   for(let i = 0; i<=8; i++) {
     
@@ -180,72 +499,243 @@ function drawClear() {
     rotate(2 * PI / 8 * i);
   }
   
-  translate(-400, -175);
-}
+  translate(-500, -200);
 
+}
+ 
 function drawMist() {
   
+//Jacke
+ strokeWeight(5);
+ stroke("red");
+ 
+//linker Arm
+ 
+ line(790, 40, 740, 90);
+ line(740, 90, 740, 200);
+ line(740, 200, 770, 200);
+ line(770, 200, 770, 120);
+ line(770, 120, 790, 100);
+ 
+//Bauch
+ 
+ line(790, 100, 790, 230);
+ line(790, 230, 880, 230);
+ line(880, 230, 880, 100);
+ line(835, 230, 835, 70);
+ 
+//rechter Arm
+ 
+ line(880, 100, 900, 120);
+ line(900, 120, 900, 200);
+ line(900, 200, 930, 200);
+ line(930, 200, 930, 90);
+ line(930, 90, 880, 40);
+ 
+//Kopf
+ 
+ line(790, 40, 805, 40);
+ line(880, 40, 865, 40);
+ noFill();
+ arc(835, 40, 50, 50, 0, HALF_PI);
+ arc(835, 40, 50, 50, HALF_PI, PI);
+ 
+ 
+//lange Hose
+
+ strokeWeight(5);
+ stroke("blue");
+ 
+//Hose
+ 
+ line(790, 260, 880, 260);
+ line(790, 260, 760, 450);
+ line(760, 450, 815, 450);
+ line(815, 450, 835, 320);
+ line(835, 320, 855, 450);
+ line(855, 450, 910, 450);
+ line(910, 450, 880, 260);
+ 
+//Taschen
+ 
+ line(790, 300, 810, 300);
+ line(810, 300, 815, 260);
+ line(880, 300, 860, 300);
+ line(860, 300, 855, 260);
+  
+  
+//Nebel
+
   stroke(195);
   strokeWeight(15);
-  line(300,200,550,200);
-  strokeWeight(15);
-  line(250,160,450,160);
-  strokeWeight(15);
-  line(350,120,560,120);
-  strokeWeight(15);
-  line(270,240,490,240);
-  strokeWeight(15);
-  line(350,280,510,280);
+  line(390,200,640,200);
+  line(350,160,540,160);
+  line(440,120,650,120);
+  line(360,240,580,240);
+  line(440,280,600,280);
 }
 
 function drawClouds() {
     
+//lange Hose
+
+ strokeWeight(5);
+ stroke("blue");
+ 
+//Hose
+ 
+ line(790, 260, 880, 260);
+ line(790, 260, 760, 450);
+ line(760, 450, 815, 450);
+ line(815, 450, 835, 320);
+ line(835, 320, 855, 450);
+ line(855, 450, 910, 450);
+ line(910, 450, 880, 260);
+ 
+//Taschen
+ 
+ line(790, 300, 810, 300);
+ line(810, 300, 815, 260);
+ line(880, 300, 860, 300);
+ line(860, 300, 855, 260);
+  
+//Pullover
+
+  strokeWeight(5);
+  stroke("green");
+  
+//linker Arm
+ line(790, 40, 740, 90);
+ line(740, 90, 740, 200);
+ line(740, 200, 770, 200);
+ line(770, 200, 770, 120);
+ line(770, 120, 790, 100);
+ 
+//Bauch
+
+ line(790, 100, 790, 230);
+ line(790, 230, 880, 230);
+ line(880, 230, 880, 100);
+ 
+//rechter Arm
+
+ line(880, 100, 900, 120);
+ line(900, 120, 900, 200);
+ line(900, 200, 930, 200);
+ line(930, 200, 930, 90);
+ line(930, 90, 880, 40);
+ 
+//Kopf
+
+ line(790, 40, 805, 40);
+ line(880, 40, 865, 40);
+ noFill();
+ arc(835, 40, 50, 50, 0, HALF_PI);
+ arc(835, 40, 50, 50, HALF_PI, PI);
+  
  //Wolke hinten
  
-  fill("lightgray");
+  fill("lightgrey");
   noStroke();
   rect(420, 158, 80, 40);
-  circle(510, 85, 100);
-  circle(460, 80, 100);
-  circle(410, 85, 100);
-  circle(375, 105, 100);
-  circle(530, 150, 100);
-  circle(470, 120, 100);
-  circle(355, 165, 100);
-  circle(420, 180, 100);
-  circle(490, 190, 100);
- 
+  circle(560, 75, 100);
+  circle(500, 70, 100);
+  circle(460, 75, 100);
+  circle(415, 95, 100);
+  circle(570, 140, 100);
+  circle(510, 110, 100);
+  circle(395, 155, 100);
+  circle(460, 170, 100);
+  circle(530, 180, 100);
+
  //Wolke vorne
  
   fill("white");
   noStroke();
-  rect(390, 168, 80, 40);
-  circle(490, 115, 100);
-  circle(440, 110, 100);
-  circle(390, 115, 100);
-  circle(355, 135, 100);
-  circle(510, 180, 100);
-  circle(450, 150, 100);
-  circle(335, 195, 100);
-  circle(400, 210, 100);
-  circle(470, 220, 100);
+  rect(390, 158, 80, 40);
+  circle(580, 115, 100);
+  circle(530, 110, 100);
+  circle(480, 115, 100);
+  circle(445, 135, 100);
+  circle(600, 180, 100);
+  circle(540, 150, 100);
+  circle(425, 195, 100);
+  circle(490, 210, 100);
+  circle(560, 220, 100);
 } 
 function drawRain() {
+  
+//Jacke
+ strokeWeight(5);
+ stroke("red");
+ 
+ //linker Arm
+ 
+ line(790, 40, 740, 90);
+ line(740, 90, 740, 200);
+ line(740, 200, 770, 200);
+ line(770, 200, 770, 120);
+ line(770, 120, 790, 100);
+ 
+ //Bauch
+ 
+ line(790, 100, 790, 230);
+ line(790, 230, 880, 230);
+ line(880, 230, 880, 100);
+ line(835, 230, 835, 70);
+ 
+ //rechter Arm
+ 
+ line(880, 100, 900, 120);
+ line(900, 120, 900, 200);
+ line(900, 200, 930, 200);
+ line(930, 200, 930, 90);
+ line(930, 90, 880, 40);
+ 
+ //Kopf
+ 
+ line(790, 40, 805, 40);
+ line(880, 40, 865, 40);
+ noFill();
+ arc(835, 40, 50, 50, 0, HALF_PI);
+ arc(835, 40, 50, 50, HALF_PI, PI);
+  
+ //Jeans
+ 
+ strokeWeight(5);
+ stroke("blue");
+ 
+ line(790, 260, 880, 260);
+ line(790, 260, 760, 450);
+ line(760, 450, 815, 450);
+ line(815, 450, 835, 320);
+ line(835, 320, 855, 450);
+ line(855, 450, 910, 450);
+ line(910, 450, 880, 260);
+ 
+ //Taschen
+ 
+ line(790, 300, 810, 300);
+ line(810, 300, 815, 260);
+ line(880, 300, 860, 300);
+ line(860, 300, 855, 260);
+  
+  
   
  //Regenwolke
  
   noStroke();
-  fill("lightgrey");
-  rect(340, 118, 80, 40);
-  circle(420, 105, 50);
-  circle(390, 100, 50);
-  circle(360, 110, 50);
-  circle(335, 125, 50);
-  circle(435, 135, 50);
-  circle(420, 135, 50);
-  circle(345, 135, 50);
-  circle(370, 140, 50);
-  circle(390, 138, 50);
+  fill("darkgrey");
+
+  circle(535, 105, 50);
+  circle(505, 100, 50);
+  circle(475, 110, 50);
+  circle(450, 125, 50);
+  circle(550, 135, 50);
+  circle(535, 135, 50);
+  circle(460, 135, 50);
+  circle(485, 140, 50);
+  circle(505, 138, 50);
   noFill();
   
  //Regen
@@ -253,7 +743,7 @@ function drawRain() {
   stroke(100, 100, 255);
   strokeWeight(2);
   
-  let x = random(320,450);
+  let x = random(435,565);
   let y = random(165, 358);
   
    line(x,y,x,y + 40);
@@ -261,7 +751,7 @@ function drawRain() {
   stroke("turquoise");
   strokeWeight(2);
   
-  let x2 = random(320,450);
+  let x2 = random(435,565);
   let y2 = random(165,358);
   
    line(x2,y2,x2,y2 + 40);
@@ -269,7 +759,7 @@ function drawRain() {
   stroke("darkblue");
   strokeWeight(2);
   
-  let x3 = random(320,450);
+  let x3 = random(435,565);
   let y3 = random(165,358);
   
    line(x3,y3,x3,y3 + 40);
