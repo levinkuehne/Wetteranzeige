@@ -124,8 +124,6 @@
     circle(150,400, 75);
     noFill();
 
---------------------------------------------------------------------
-
 //Nebel
 
 function setup() {
@@ -135,20 +133,104 @@ function setup() {
 function draw() {
   stroke(195);
   strokeWeight(15);
-  line(650,200,900,200);
+  line(300,200,550,200);
+  strokeWeight(15);
+  line(250,160,450,160);
+  strokeWeight(15);
+  line(350,120,560,120);
+  strokeWeight(15);
+  line(270,240,490,240);
+  strokeWeight(15);
+  line(350,280,510,280);
+}
+
+
+//Gewitter
+
+  fill("yellow");
+  strokeWeight(5);
+  stroke(255);
+  beginShape();
+  vertex(400, 180);
+  vertex(330, 310);
+  vertex(375, 310);
+  vertex(330, 430);
+  vertex(455, 280)
+  vertex(400, 280)
+  endShape(CLOSE);
+  
   
 
-  strokeWeight(15);
-  line(600,160,800,160);
+  fill("white");
+  noStroke();
+  rect(390, 168, 80, 40);
+  circle(490, 115, 100);
+  circle(440, 110, 100);
+  circle(390, 115, 100);
+  circle(355, 135, 100);
+  circle(510, 180, 100);
+  circle(450, 150, 100);
+  circle(335, 195, 100);
+  circle(400, 210, 100);
+  circle(470, 220, 100);
+  noFill(); 
+
+//schnee
+var quantity = 300;
+var xPosition = [];
+var yPosition = [];
+var flakeSize = [];
+var direction = [];
+var minFlakeSize = 1;
+var maxFlakeSize = 5;
+var snowColor = 255;
+
+function setup() {
+  createCanvas(1000, 500);
+  frameRate(30);
+  noStroke();
   
- 
-  strokeWeight(15);
-  line(700,120,910,120);
-  
- 
-  strokeWeight(15);
-  line(620,240,840,240);
-  
-  strokeWeight(15);
-  line(700,280,860,280);
+  for(var i = 0; i < quantity; i++) {
+    flakeSize[i] = round(random(minFlakeSize, maxFlakeSize));
+    xPosition[i] = random(0, width);
+    yPosition[i] = random(0, height);
+    direction[i] = round(random(0, 1));
+  }
 }
+
+function draw() {
+  background("lightblue");
+  fill(snowColor);
+  drawSnowMan();
+  drawSnow();
+  
+  fill("lightblue");
+  rect(0,0,333,500);
+  rect(666,0,334,500);
+}
+
+function drawSnow() {
+  for(var i = 0; i < xPosition.length; i++) {
+    
+    ellipse(xPosition[i], yPosition[i], flakeSize[i], flakeSize[i]);
+    
+    if(direction[i] == 0) {
+      xPosition[i] += map(flakeSize[i], minFlakeSize, maxFlakeSize, .1, .5);
+    } else {
+      xPosition[i] -= map(flakeSize[i], minFlakeSize, maxFlakeSize, .1, .5);
+    }
+    
+    yPosition[i] += flakeSize[i] + direction[i]; 
+   -] = random(0, width);
+      yPosition[i] = -flakeSize[i];
+    } 
+  }
+}
+
+function drawSnowMan() {
+
+
+
+ 
+}
+
