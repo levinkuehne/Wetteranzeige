@@ -52,11 +52,13 @@ function displayWeatherData() {
      
    let OutputTemp = "Die Temperatur beträgt " + temp + " °C.";
    fill(0);
-   text(OutputTemp, 25, 75, 200, 100);
+   textSize(15);
+   text(OutputTemp, 25, 75, 250, 200);
   
    let OutputWeather = weather;
    fill(0);
-   text(OutputWeather, 25, 125, 200, 100);
+   textSize(15);
+   text(OutputWeather, 25, 125, 250, 200);
 } 
 }
 
@@ -95,6 +97,59 @@ function draw() {
   
   displayWeatherData();
   
+//Thermometer Setup
+
+  fill("red");
+  stroke("grey");
+  strokeWeight(5);
+  line(145, 420, 145, 200);
+  line(105, 420, 105, 200);
+  circle(125, 440, 75);
+  line(105, 200, 145, 200);
+  
+  //Thermometer  
+
+  let temp = temperature + 10;
+  let varY =  200 / 60 * -temp;
+  fill("red");
+  noStroke();
+  rect(107, 400, 35 , varY);
+  
+  stroke("grey");
+  strokeWeight(5);
+  line(150, 233, 125, 233);
+  line(150, 266, 125, 266);
+  line(150, 299, 125, 299);
+  line(150, 332, 125, 332);
+  line(150, 365, 125, 365);
+
+  
+  noStroke();
+  fill("red");
+  rect(107, 420, 36,-22);
+  
+  strokeWeight(5);
+  stroke("grey");
+  line(150, 400, 125, 400);
+  
+  let text1 = "-10 °C";
+  let text2 = "  0 °C";
+  let text3 = " 10 °C";
+  let text4 = " 20 °C";
+  let text5 = " 30 °C";
+  let text6 = " 40 °C";
+  
+  fill("black");
+  strokeWeight(0);
+  
+  textSize(13);
+  text(text1, 165, 401);
+  text(text2, 165, 368);
+  text(text3, 165, 335);
+  text(text4, 165, 302);
+  text(text5, 165, 269);
+  text(text6, 165, 236);
+    
   if(weather == "Rain") {
     drawRain();
   } else if(weather == "Clouds") {
@@ -483,26 +538,26 @@ function drawThunderstorm() {
   strokeWeight(5);
   stroke(255);
   beginShape();
-  vertex(400, 180);
-  vertex(330, 310);
-  vertex(375, 310);
-  vertex(330, 430);
-  vertex(455, 280);
-  vertex(400, 280);
+  vertex(500, 180);
+  vertex(430, 310);
+  vertex(475, 310);
+  vertex(430, 430);
+  vertex(555, 280);
+  vertex(500, 280);
   endShape(CLOSE);
   
   fill("grey");
   noStroke();
-  rect(390, 168, 80, 40);
-  circle(490, 115, 100);
-  circle(440, 110, 100);
-  circle(390, 115, 100);
-  circle(355, 135, 100);
-  circle(510, 180, 100);
-  circle(450, 150, 100);
-  circle(335, 195, 100);
-  circle(400, 210, 100);
-  circle(470, 220, 100);
+  rect(460, 168, 80, 40);
+  circle(560, 115, 100);
+  circle(510, 110, 100);
+  circle(460, 115, 100);
+  circle(425, 135, 100);
+  circle(580, 180, 100);
+  circle(520, 150, 100);
+  circle(405, 195, 100);
+  circle(470, 210, 100);
+  circle(540, 220, 100);
   noFill();  
 }
 
