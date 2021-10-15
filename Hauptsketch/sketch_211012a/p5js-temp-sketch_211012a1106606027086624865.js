@@ -52,11 +52,13 @@ function displayWeatherData() {
      
    let OutputTemp = "Die Temperatur beträgt " + temp + " °C.";
    fill(0);
-   text(OutputTemp, 25, 75, 200, 100);
+   textSize(15);
+   text(OutputTemp, 25, 75, 250, 200);
   
    let OutputWeather = weather;
    fill(0);
-   text(OutputWeather, 25, 125, 200, 100);
+   textSize(15);
+   text(OutputWeather, 25, 125, 250, 200);
 } 
 }
 
@@ -483,26 +485,26 @@ function drawThunderstorm() {
   strokeWeight(5);
   stroke(255);
   beginShape();
-  vertex(400, 180);
-  vertex(330, 310);
-  vertex(375, 310);
-  vertex(330, 430);
-  vertex(455, 280);
-  vertex(400, 280);
+  vertex(500, 180);
+  vertex(430, 310);
+  vertex(475, 310);
+  vertex(430, 430);
+  vertex(555, 280);
+  vertex(500, 280);
   endShape(CLOSE);
   
   fill("grey");
   noStroke();
-  rect(390, 168, 80, 40);
-  circle(490, 115, 100);
-  circle(440, 110, 100);
-  circle(390, 115, 100);
-  circle(355, 135, 100);
-  circle(510, 180, 100);
-  circle(450, 150, 100);
-  circle(335, 195, 100);
-  circle(400, 210, 100);
-  circle(470, 220, 100);
+  rect(460, 168, 80, 40);
+  circle(560, 115, 100);
+  circle(510, 110, 100);
+  circle(460, 115, 100);
+  circle(425, 135, 100);
+  circle(580, 180, 100);
+  circle(520, 150, 100);
+  circle(405, 195, 100);
+  circle(470, 210, 100);
+  circle(540, 220, 100);
   noFill();  
 }
 
